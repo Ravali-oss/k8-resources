@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+ name: annotations
+ annotations: 
+   buildURL: "https://www.jenkins.io/"
+   imageregisrty: "https://hub.docker.com/repositories/ravaali"
+spec:
+ containers:
+ - name: nginx
+   image: nginx
