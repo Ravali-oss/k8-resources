@@ -4,13 +4,14 @@ metadata:
  name: nginx
 spec:
  selector: #labels are used as selectors. It matches these labels with the pods, and get connected to that pod
-  project: expense
-  component: backend
-  environment: dev
+   project: expense
+   component: backend
+   environment: dev
  ports:
  - protocol: TCP
    port: 80
    targetprocess: 80
+ 
 
 ---
 
