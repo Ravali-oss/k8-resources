@@ -7,11 +7,13 @@ spec:
   project: expense
   component: backend
   environment: dev
-ports:
-- protocol: TCP
-  port: 80
-  targetprocess: 80
+  ports:
+  - protocol: TCP
+    port: 80
+    targetprocess: 80
+
 ---
+
 kind: Pod
 apiVersion: v1
 metadata:
