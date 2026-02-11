@@ -1,9 +1,9 @@
 kind: Pod
 apiVersion: v1
 metadata:
- name: nginx
- namespace: expense 
+ name: nginx #pod name
+ namespace: expense #pod will be created inside expense namespace. All our files in the project should be given in the same namespace to achieve isolation from other projects
 spec:
  containers:
- - name: nginx
-   image: nginx
+ - name: nginx #container name inside the pod
+   image: nginx #It pulls the official image from dockerhub.
