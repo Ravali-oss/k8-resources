@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
-  namespace: expense
-  labels: 
+  name: nginx #Name of the deployment
+  namespace: expense #deployment will be created in the expense namespace
+  labels:  #labels are used to identify the resouces or pods
     app: frontend
     tier: web
     purpose: deployment
 spec:
-  replicas: 3
+  replicas: 3 #3 pods will be created
   selector:
-    matchLabels:
+    matchLabels: #this tells deployment will handle the pods with these labels
       app: frontend
       tier: web
       purpose: deployment
   template:
     metadata:
-      labels:
+      labels:  # 3 pods will be created with these labels
         app: frontend
         tier: web
         purpose: deployment
     spec:
-      containers:
+      containers: # a container will be created inside the pod. It pulls the image from docker hub and creates the container here.
       - name: nginx
         image: ravaali/deployment:1.0
         ports: 
